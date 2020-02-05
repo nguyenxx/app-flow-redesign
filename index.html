@@ -90,31 +90,20 @@
                 padding: 15px 150px;
                 background-color: #f1f3fa;
             }
-            .overlay {
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                height: 100%;
-                width: 100%;
-                opacity: 0;
-                transition: .5s ease;
-                background-color: whitesmoke;
+            .section5 {
+                grid-column: 1/13;
+                padding: 15px 150px;
+                background-color: #f1f3fa;
             }
-            .container-sp:hover .overlay {
-                opacity: 0.8;
+            .section6 {
+                grid-column: 1/13;
+                padding: 15px 150px;
+                background-color: #f1f3fa;
             }
-            .text {
-                color: white;
-                font-size: 20px;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                -webkit-transform: translate(-50%, -50%);
-                -ms-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
-                text-align: center;
+            .section7 {
+                grid-column: 1/13;
+                padding: 15px 150px;
+                background-color: #f1f3fa;
             }
             .help{
                 grid-column:1/13;
@@ -141,56 +130,6 @@
             a:hover {
                 color: #2884cf;
             }
-            /********************* MEDIA QUERY - 620 ****************/
-            @media only screen and (min-width:620px) {
-                nav {
-                    grid-column: 1/13;
-                }
-                section {
-                    grid-column: 1/13;
-                }
-                section2 {
-                    grid-column: 1/13;
-                }
-                section3 {
-                    grid-column: 1/13;
-                }
-                section4 {
-                    grid-column: 1/13;
-                }
-                .help {
-                    grid-column: 1/7;
-                }
-                .social {
-                    grid-column: 7/13;
-                }
-            }
-            
-            /********************* MEDIA QUERY - 900 ****************/
-            @media only screen and (min-width:900px) {
-                nav {
-                    grid-column: 1/13;
-                }
-                section {
-                    grid-column: 1/13;
-                }
-                section2 {
-                    grid-column: 1/13;
-                }
-                section3 {
-                    grid-column: 1/13;
-                }
-                section4 {
-                    grid-column: 1/13;
-                }
-                .help {
-                    grid-column: 1/7;
-                }
-                .social {
-                    grid-column: 7/13;
-                }
-            }
-            
         </style>
     </head>
     <body>
@@ -206,7 +145,7 @@
              </a>
           </div>
           <section>
-          <h1> Redesigning the user interface on Outlook Mobile Application - a UX case study</h1> 
+          <h1> Redesigning the user interface of Outlook Mobile Application - a UX case study</h1> 
           <img src="images/profile.png" align="left">
           <br>
           <p style="color: gray;"> Written by: Susie Nguyen <br>
@@ -216,7 +155,7 @@
               <p> With the development of digital technology and rise in the use of the hand held devices, the number of various mobile applications available in the market are increasing tremendously. Understanding the concepts of user experience and user interface design is significant in the process of creating and implementing a mobile application. 
               <br>
               <br>
-              <b>Microsoft Outlook</b> is a popular email application by Microsoft available both on desktop and mobile devices. Despite being widely used, the application is still lacking in certain usability and UX dimensions. In particular, the user interface for the Outlook Calendar on its mobile application needs considerable improvements.
+              <b>Microsoft Outlook</b> is a popular email application by Microsoft available both on desktop and mobile devices. Despite being widely used, the application still lacks in certain dimensions of usability and user experience. In particular, the user interface for the Outlook Calendar on its mobile application needs considerable improvements.
               </p>
           </div>
           <div class="section3">
@@ -243,73 +182,83 @@
               </ul>
           </div>
           <div class="section4">
-          <h1> Design Problem Statement</h1>
-          <p> Despite being a great email mobile application and time management tool, Outlook Mobile Application should make improvements towards the way it is achieving those user goals. Specifically, the user interface design of the Outlook Calendar on its mobile application can often be unclear, inefficient and error-prone. The main <b>pain point</b> of the Outlook Calendar is that the design features of this application  <b>do not communicate well with their functionality</b> as it does not exhibit proper visual and physical properties.
-          <br>
-          <br>
-          <b>Design Question</b>: <em>"How might we improve the experience of individuals utilizing Outlook Calendar on their mobile device?"</em>
-          </p>
-          <figure>
-            <img src="images/computer-screen.jpg">
-            <br>
-            <figcaption> Outlook Calendar on a desktop device </figcaption>
-          </figure>
-          <p> In contrast to the desktop version of the email application, there is no way on the mobile app to create an event with a different colored tag. Although the mobile version does sync with the actions done on the desktop, having to do this on the desktop in order to view it on the mobile diminishes the purpose of installing the mobile application. </p>
-              
-          <p> Even on the desktop version, it is unintuitive as you would have to go through multiple steps in order to create an event with a different colored tag. First, you would have to “Add a calendar”, choose the color of the tag you want for the events on that calendar. Next, add new events to that calendar. Then, you would have to select the calendars you want to see on the default view of the Calendar feature. Finally, only when you have selected the calendars you want to see on your main view will the your Outlook Calendar show the events categorized by color. As demonstrated by the complex process of sorting events on the Calendar feature of the Outlook mobile app, the design features of this application does not communicate well with their functionality as it does not exhibit proper visual and physical properties. </p>
-             
-          <figure>
-            <img src="images/screens-1.jpg">
-            <br>
-            <figcaption> Outlook Mobile Calendar: adding a new event </figcaption>
-          </figure>
-          
-          <figure>
-            <img src="images/screens-2.jpg">
-            <br>
-            <figcaption> Outlook Mobile Calendar: settings </figcaption>
-          </figure>
-              
-          <figure>
-            <img src="images/pain-point.jpg">
-            <br>
-            <figcaption> Paint Point: inability to manually set colors for calendar events </figcaption>
-          </figure>
-              
-          <figure>
-            <img src="images/solution1.png">
-            <br>
-            <figcaption> Solution: control panel with both choices of color and icon </figcaption>
-          </figure>
-              
-          <figure>
-            <img src="images/solution2.png">
-            <br>
-            <figcaption> Solution: control panel with both choices of color and icon </figcaption>
-          </figure>
-              
-          <figure>
-            <img src="images/solution-cal.jpg">
-            <br>
-            <figcaption> Solution: control panel with both choices of color and icon </figcaption>
-          </figure>
-              
-          <figure>
-            <img src="images/research2.jpg">
-            <br>
-            <figcaption> Solution: control panel with both choices of color and icon </figcaption>
-          </figure>
-              
-          <figure>
-            <img src="images/research3.jpg">
-            <br>
-            <figcaption> Solution: control panel with both choices of color and icon </figcaption>
-          </figure>
+          <h1> App Analysis </h1>
+              <p> Despite being a great email mobile application and time management tool, Outlook Mobile Application should make improvements towards the way it is achieving those user goals. Specifically, the user interface design of the Outlook Calendar on its mobile application can often be unclear, inefficient and error-prone. The interface needs improvement in the following usability dimensions: <b> standardization</b>, <b>visibility</b>, and <b>natural mapping</b>. </p>
+              <h2> Standardization </h2>
+              <figure>
+                <img src="images/screens-1.jpg">
+                <br>
+                <figcaption> Outlook Mobile Calendar: adding a new event </figcaption>
+              </figure>
+              <p> The mobile version of Outlook Calendar is inconsistent with the features available on its desktop version as well as its visual implementation. For instance, in contrast to the desktop version of the email application, the mobile version has does not provide any method for the user to create an event with a different colored tag. Although the mobile version does sync with the actions done on the desktop, having to do this on the desktop in order to view it on the mobile device diminishes the purpose of installing the mobile application. </p>
+              <figure>
+                <img src="images/computer-screen.jpg">
+                <br>
+              <figcaption> Outlook Calendar on a desktop device </figcaption>
+              </figure>
+              <p> Even on the desktop version, sorting Outlok Calendar events and categorizing them is unintuitive as you would have to go through multiple complicated steps in order to achieve that complete and color-coded view of events. First, you would have to click on “Add a calendar”, then choose the color of the tag you want for the events on that calendar. Next, add new events to that calendar. Afterward, you would have to select the calendars you want to see on the default view of the Calendar feature. Finally, only when you have selected the calendars you want to see on your main view, will your Outlook Calendar show the view of all the events with different colored tags based on the calendars created. This process requires too many steps just to be able to give each event category a different color. </p>
+              <h2> Visibility and Natural Mapping </h2>
+              <figure>
+                <img src="images/screens-2.jpg">
+                <br>
+                <figcaption> Outlook Mobile Calendar: settings </figcaption>
+              </figure>
+              <p> Beside being inconsistent with the "Add Calendar" option from the desktop implementation, Mobile Outlook Calendar does not exhibit good visibility and natural mapping. As you can see, an index pane is used to store the secondary settings for the calendar. Even though index panes work well most of the time for secondary settings, the ability to change color for the Calendar should be considered as one of the primary tasks and should be displayed on the same control panel as choosing an icon for an event. Instead, this feature is displayed on another the pop-up menu within that index pane. This mapping can be unintuitve and confusing for new users and weakens the visibility of available functions.</p>
+        <br>
+        <br>
+        <h1> Design Problem Statement </h1>
+             <p> As demonstrated by this complicated and long process of categorizing events on Outlook Calendar by color, we can conclude that the main <b>pain point</b> of this application is that its design features do not communicate well with its functionalitise as they does not exhibit proper visual and physical properties. </p>
+             <p> <b>Design Question</b>: <em>"How might we improve the experience of individuals utilizing Outlook Calendar on their mobile device?"</em>
+             </p>
+             <figure>
+                <img src="images/pain-point.jpg">
+                <br>
+                <figcaption> Paint Point: cluttered calendar due to the inability to manually set colors for calendar events </figcaption>
+             </figure>
+        </div>
+        <div class="section5">
+        <h1> User Research </h1>
+              <p>The participants of this case study are twenty-two college students from James Madison University who are all also users of Microsoft Outlook email application. They were contacted by email and through social media platforms, and were asked to fill out a Google Survey. I would like to acknowledge that due to the small scope of the participants there might be limitations to this case study, however, there is no doubt that the data collected from these twenty-two participants will definitely gather some valuable insights. </p>
+              <figure>
+                <img src="images/research2.jpg">
+                <br>
+                <figcaption> Google Survey Results: Most frequenly used feature </figcaption>
+              </figure>
+              <p> As demonstarted by the results of the survey, most participants use Outlook Mobile App for getting an instant access to their emails as well as utilizing Outlook Calendar. When asked to rate their experience interacting with the current Outlook Calendar interface (on a scale from 1-5), more than half rated their experience as something lower than a four. </p>
+              <figure>
+                <img src="images/research3.jpg">
+                <br>
+                <figcaption> Google Survey Results: Feature that need improvement the most </figcaption>
+              </figure>
+              <p> Thirteen out of twenty-two participants have agreed that Outlook Calendar needs major revisions on its functionality as a digital planner and task management. In response to the question asking to describe why they think those features need improvements, one of the participants (Tam Nguyen) said "User interface can be improved to me more intuitive and simplified!".</p> 
+        </div>
+        <div class="section6">
+        <h1> The Solution </h1>
+              <figure>
+                <img src="images/solution-cover.jpg">
+              </figure>
+              <p> Based on the feedback from the participants and the results of the Google Survey as well as the analysis of UX and usability dimensions of the app, I have came up with the new design implementation for the sorting features of Outlook Calendar. </p>
+              <h2> New Event Categorization Control Panel </h2>
+              <figure>
+               <img src="images/solution1.png">
+               <br>
+               <figcaption> Solution: control panel with both choices of color and icon </figcaption>
+              </figure>
+              <p> In contrast to the current implementation, this design solution gives the users a two-in-one step of sorting the calendar events by category. By having both - the option to select a color as well as the option to choose an icon for the calendar event - the process of creating an event and giving it a category is significantly simplified. By default, the color of a calendar event will show up as blue (Outlook's primary color). </p>
+              <figure>
+               <img src="images/solution2.png">
+               <br>
+               <figcaption> Solution: control panel with both choices of color and icon </figcaption>
+              </figure>
+              <p> This design implementation eleminates the inefficiency in sorting the events and the need to switch to the desktop version in order to achieve that goal. The mobile application has become just as useful as the desktop version. Now, you can stay organized with Outlook even just using the mobile version. </p>
+          </div>
+          <div class="section7">
+            <h1> Thanks for Reading </h1>
+              <p> Thank you so much for reading through this case study. I would love to hear any feedback from you or if you have any questions, contact me by <a href="mailto:nguyenxx@dukes.jmu.edu" style="color: rebeccapurple; text-decoration: none"> email </a>. This project was created as a part of an App Flow Redesign assignment in SMAD308: Interactive Design II course at James Madison University. Through the process of this UX case study, I was able to apply my understanding of UX and usability dimensions and user reasearch in order to create the optimal solution to the challenges posed. </p>
           </div>
           <footer class="padding-footer">
             <p> Website by Susie Nguyen | Contact information: <a href="mailto:nguyenxx@dukes.jmu.edu" style="text-decoration: none">nguyenxx@dukes.jmu.edu</a> | LinkedIn: <a href="https://www.linkedin.com/in/susie-nguyen/" target="_blank" style="text-decoration: none">linkedin.com/in/susie-nguyen/</a></p>
           </footer>
         </div>
-    
     </body>
 </html>
