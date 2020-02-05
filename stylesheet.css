@@ -1,0 +1,37 @@
+img {
+    max-width:100%;
+    height:auto;
+    display: block;
+    transition: .8s ease;
+    margin: auto;
+    padding-right: 1em;
+    padding-top: 1em;
+}
+figure {
+    padding-right: 1.75em;
+}
+h1 {
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    color: #151515;
+    text-align: left;
+}
+p {
+    font-family: 'Merriweather', serif;
+    color: #151515;
+    font-size: 16px;
+    text-align: left;
+    line-height: 2em;
+}
+ul, li {
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+    line-height: 2em;
+}
+figcaption {
+    font-family: 'Merriweather', serif;
+    color: darkgrey;
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.5em;
+}

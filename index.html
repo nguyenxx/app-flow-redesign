@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+    <head>
+         <meta charset = "UTF-8">
+        <title> App Flow Redesign </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel ="stylesheet" href="stylesheet.css">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:300&display=swap" rel="stylesheet">
+        <style>
+            html {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+            *,*:before, *after {
+                -webkit-box-sizing: inherit;
+                -moz-box-sizing: inherit;
+                box-sizing: inherit;
+            }    
+            body {
+                margin: 0;
+            }  
+            .container {
+                display:grid;
+                grid-template-columns:repeat(12, 1fr); 
+                grid-auto-rows:minmax(30px, auto);
+                margin:0 auto;
+                max-width:1440px;
+            }
+            nav {
+                grid-column:1/13;
+            }
+            nav ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-image:url(images/nav.jpg);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            nav li {
+                float: right;
+            }
+            nav li a {
+                display: inline-block;
+                text-align: center;
+                padding-top: 1.85em;
+                padding-left: 1.5em;
+                padding-bottom: 1em;
+                text-decoration: none;
+                transition: .7s ease;
+                color: #151515;
+            }
+            nav li a:hover{
+                text-shadow: 0 2px 2px rgba(0,0,0,0.2);
+                color: #2884cf;
+            }
+            .image-cover {
+                grid-column:1/13;
+                opacity: 1;
+                backface-visibility: hidden;
+                transition: .5s ease;
+            }
+            .image-cover:hover {
+                opacity: 0.9;
+            }
+            section {
+                grid-column: 1/13;
+                padding: 15px 150px;
+                background-color: #f1f3fa;
+            }
+            .section2 {
+                grid-column: 1/13;
+                padding: 15px 150px;
+                background-color: #f1f3fa;
+            }
+            .section3 {
+                grid-column: 1/13;
+                padding: 15px 150px;
+                background-color: #f1f3fa;
+            }
+            .section4 {
+                grid-column: 1/13;
+                padding: 15px 150px;
+                background-color: #f1f3fa;
+            }
+            .overlay {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                transition: .5s ease;
+                background-color: whitesmoke;
+            }
+            .container-sp:hover .overlay {
+                opacity: 0.8;
+            }
+            .text {
+                color: white;
+                font-size: 20px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+            .help{
+                grid-column:1/13;
+                background-color: #fafaf5;
+            }
+            .social{
+                grid-column:1/13;
+                background-color: #fafaf5;
+            }
+            footer {
+                grid-column:1/13;
+                background-color: #fafaf9;
+            }
+            .padding-footer {
+                padding-left: 14em;
+                padding-right: 2em;
+                padding-top: 20px;
+                text-align: center;
+            }
+            a:link, a:visited {
+                color: #151515;
+                text-decoration: none;
+            }
+            a:hover {
+                color: #2884cf;
+            }
+            /********************* MEDIA QUERY - 620 ****************/
+            @media only screen and (min-width:620px) {
+                nav {
+                    grid-column: 1/13;
+                }
+                section {
+                    grid-column: 1/13;
+                }
+                section2 {
+                    grid-column: 1/13;
+                }
+                section3 {
+                    grid-column: 1/13;
+                }
+                section4 {
+                    grid-column: 1/13;
+                }
+                .help {
+                    grid-column: 1/7;
+                }
+                .social {
+                    grid-column: 7/13;
+                }
+            }
+            
+            /********************* MEDIA QUERY - 900 ****************/
+            @media only screen and (min-width:900px) {
+                nav {
+                    grid-column: 1/13;
+                }
+                section {
+                    grid-column: 1/13;
+                }
+                section2 {
+                    grid-column: 1/13;
+                }
+                section3 {
+                    grid-column: 1/13;
+                }
+                section4 {
+                    grid-column: 1/13;
+                }
+                .help {
+                    grid-column: 1/7;
+                }
+                .social {
+                    grid-column: 7/13;
+                }
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="container">
+          <nav>
+            <ul>
+                <li><a href="index.html">App-Flow Redesign</a></li>
+                <li><a href="product1.html">About</a></li>
+            </ul> 
+          </nav>
+          <div class ="image-cover">
+             <a target="_blank" href="https://outlook.live.com/owa/"><img src="images/cover-home4.jpg">
+             </a>
+          </div>
+          <section>
+          <h1> Redesigning the user interface on Outlook Mobile Application - a UX case study</h1> 
+          <img src="images/profile.png" align="left">
+          <br>
+          <p style="color: gray;"> Written by: Susie Nguyen <br>
+              Last Updated: February 3, 2019 </p>
+          </section>
+          <div class="section2">
+              <p> With the development of digital technology and rise in the use of the hand held devices, the number of various mobile applications available in the market are increasing tremendously. Understanding the concepts of user experience and user interface design is significant in the process of creating and implementing a mobile application. 
+              <br>
+              <br>
+              <b>Microsoft Outlook</b> is a popular email application by Microsoft available both on desktop and mobile devices. Despite being widely used, the application is still lacking in certain usability and UX dimensions. In particular, the user interface for the Outlook Calendar on its mobile application needs considerable improvements.
+              </p>
+          </div>
+          <div class="section3">
+          <h1> Identifying the users and their goals</h1>
+              <p> The <b>primary users</b> of the Outlook Mobile App often consist of individuals who have already created an Outlook account on the Desktop version of the email application or individuals who prefer accessing their email using a mobile device. 
+              <br> 
+              <br>
+              The <b>goals</b> of the users of the Outlook Mobile App are: 
+              </p>
+              <ul>
+                <li> Sending/Receiving emails</li>
+                <li> Receiving instant email notifications</li>
+                <li> Utilizing Outlook Calendar
+                  <ul>
+                    <li> Getting reminders on the calendar events attached in the emails</li>
+                    <li> Getting reminders on the calendar</li>
+                    <li> Use it as a digital weekly/monthly/yearly planner</li>
+                    <li> Sorting the events on the calendar</li>
+                    <li> Use it to send a Calendar Invite/Use it for scheduling appointments</li>
+                  </ul>
+                </li>
+                <li> Accessing Office 365 document attachments</li>
+                <li> Sorting emails</li>
+              </ul>
+          </div>
+          <div class="section4">
+          <h1> Design Problem Statement</h1>
+          <p> Despite being a great email mobile application and time management tool, Outlook Mobile Application should make improvements towards the way it is achieving those user goals. Specifically, the user interface design of the Outlook Calendar on its mobile application can often be unclear, inefficient and error-prone. The main <b>pain point</b> of the Outlook Calendar is that the design features of this application  <b>do not communicate well with their functionality</b> as it does not exhibit proper visual and physical properties.
+          <br>
+          <br>
+          <b>Design Question</b>: <em>"How might we improve the experience of individuals utilizing Outlook Calendar on their mobile device?"</em>
+          </p>
+          <figure>
+            <img src="images/computer-screen.jpg">
+            <br>
+            <figcaption> Outlook Calendar on a desktop device </figcaption>
+          </figure>
+          <p> In contrast to the desktop version of the email application, there is no way on the mobile app to create an event with a different colored tag. Although the mobile version does sync with the actions done on the desktop, having to do this on the desktop in order to view it on the mobile diminishes the purpose of installing the mobile application. </p>
+              
+          <p> Even on the desktop version, it is unintuitive as you would have to go through multiple steps in order to create an event with a different colored tag. First, you would have to “Add a calendar”, choose the color of the tag you want for the events on that calendar. Next, add new events to that calendar. Then, you would have to select the calendars you want to see on the default view of the Calendar feature. Finally, only when you have selected the calendars you want to see on your main view will the your Outlook Calendar show the events categorized by color. As demonstrated by the complex process of sorting events on the Calendar feature of the Outlook mobile app, the design features of this application does not communicate well with their functionality as it does not exhibit proper visual and physical properties. </p>
+             
+          <figure>
+            <img src="images/screens-1.jpg">
+            <br>
+            <figcaption> Outlook Mobile Calendar: adding a new event </figcaption>
+          </figure>
+          
+          <figure>
+            <img src="images/screens-2.jpg">
+            <br>
+            <figcaption> Outlook Mobile Calendar: settings </figcaption>
+          </figure>
+              
+          <figure>
+            <img src="images/pain-point.jpg">
+            <br>
+            <figcaption> Paint Point: inability to manually set colors for calendar events </figcaption>
+          </figure>
+              
+          <figure>
+            <img src="images/solution1.png">
+            <br>
+            <figcaption> Solution: control panel with both choices of color and icon </figcaption>
+          </figure>
+              
+          <figure>
+            <img src="images/solution2.png">
+            <br>
+            <figcaption> Solution: control panel with both choices of color and icon </figcaption>
+          </figure>
+              
+          <figure>
+            <img src="images/solution-cal.jpg">
+            <br>
+            <figcaption> Solution: control panel with both choices of color and icon </figcaption>
+          </figure>
+              
+          <figure>
+            <img src="images/research2.jpg">
+            <br>
+            <figcaption> Solution: control panel with both choices of color and icon </figcaption>
+          </figure>
+              
+          <figure>
+            <img src="images/research3.jpg">
+            <br>
+            <figcaption> Solution: control panel with both choices of color and icon </figcaption>
+          </figure>
+          </div>
+          <footer class="padding-footer">
+            <p> Website by Susie Nguyen | Contact information: <a href="mailto:nguyenxx@dukes.jmu.edu" style="text-decoration: none">nguyenxx@dukes.jmu.edu</a> | LinkedIn: <a href="https://www.linkedin.com/in/susie-nguyen/" target="_blank" style="text-decoration: none">linkedin.com/in/susie-nguyen/</a></p>
+          </footer>
+        </div>
+    
+    </body>
+</html>
